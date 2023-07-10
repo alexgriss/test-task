@@ -108,6 +108,7 @@ const useUsers = () => {
             .map((teamMember) => ({
               id: teamMember.id,
               userName: `${teamMember.user.name} ${teamMember.user.lastName}`,
+              isInvited: false,
             }));
 
           const invitesAdministrators = invitesResponse
@@ -115,7 +116,7 @@ const useUsers = () => {
             .map((invite) => ({
               id: invite.id,
               userName: invite.phone,
-              isInvited: false,
+              isInvited: true,
             }));
 
           const administrators = [
@@ -130,6 +131,7 @@ const useUsers = () => {
             .map((teamMember) => ({
               id: teamMember.id,
               userName: `${teamMember.user.name} ${teamMember.user.lastName}`,
+              isInvited: false,
             }));
 
           const invitesStandardUsers = invitesResponse

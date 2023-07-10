@@ -1,8 +1,4 @@
-const get = (obj: Object, path: string, defaultValue?: any) => {
-  if (Object.keys(obj).length === 0) {
-    return defaultValue;
-  }
-
+const get = (obj, path, defaultValue) => {
   const keysFromPath = path.split(".");
 
   const firstKey = keysFromPath[0];
